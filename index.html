@@ -286,7 +286,9 @@
   .socialgrid{display:flex;gap:14px;flex-wrap:wrap;}
   .social-pill{
     background:var(--rojo);color:#fff;padding:12px 20px;border-radius:100px;font-weight:700;font-size:0.9rem;
+    transition:transform .2s;background:var(--rojo);display:inline-block;
   }
+  .social-pill:hover{transform:translateY(-3px);}
 
   footer{
     background-color:var(--rojo-oscuro);
@@ -489,8 +491,8 @@
         <h2>¿Trabajamos juntas?</h2>
         <p>Cuéntame sobre tu marca y tu producto. Respondo en menos de 24 horas.</p>
         <div class="socialgrid">
-          <span class="social-pill">📷 Instagram: @soyjoanlazo </span>
-          <span class="social-pill">🎵 TikTok: @soyjoanlazo </span>
+          <a href="https://www.instagram.com/soyjoanlazo/" target="_blank" rel="noopener noreferrer"><span class="social-pill">📷 Instagram: @soyjoanlazo </span></a>
+          <a href="https://www.tiktok.com/@soyjoanlazo" target="_blank" rel="noopener noreferrer"><span class="social-pill">🎵 TikTok: @soyjoanlazo </span></a>
         </div>
       </div>
       <div class="contact-links">
