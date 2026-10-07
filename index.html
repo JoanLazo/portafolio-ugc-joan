@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joan Lazo | Creadora de Contenido UGC</title>
-<meta name="description" content="Portafolio de creadora de contenido UGC especializada en belleza, moda/lifestyle y tecnología.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joan Lazo | Creadora de Contenido UGC</title>
+    <meta name="description"
+      content="Portafolio de creadora de contenido UGC especializada en belleza, moda/lifestyle y tecnología.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+    <style>
   :root{
     --rojo: #C81D3B;
     --rojo-oscuro: #7A0E24;
@@ -196,6 +199,12 @@
 
   /* ---------- PORTAFOLIO ---------- */
   .portafolio{background:#fff;}
+  .niche-section{margin-bottom:64px;}
+  .niche-section h3{
+    color:var(--rojo-oscuro);font-size:1.2rem;text-align:center;margin-bottom:24px;
+    font-weight:700;
+  }
+  .niche-section:last-child{margin-bottom:0;}
   .port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .port-card{
     position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;
@@ -203,10 +212,11 @@
     box-shadow:0 14px 28px -10px rgba(122,12,46,0.2);
     border:3px solid #fff;
   }
-  .port-card iframe{
+.port-card iframe{
     position:absolute;inset:0;width:100%;height:100%;border:0;display:block;
     background:#fff;opacity:0;transition:opacity .3s;
-  }
+    max-width:100%;height:auto;
+}
   .port-card iframe.loaded{opacity:1;}
   .port-card:hover{transform:translateY(-4px);transition:transform .25s;}
   .port-card .ribbon-tag{z-index:3;}
@@ -243,7 +253,7 @@
   }
 
   /* ---------- SERVICIOS ---------- */
-  .servicios{background:var(--crema);}
+  .servicios{background:var(--crema);display:none;}
   .serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
   .serv-card{
     background:#fff;border-radius:24px;padding:32px;border:1px solid rgba(122,12,46,0.08);
@@ -303,7 +313,7 @@
   @media (max-width:900px){
     .hero-grid,.about-grid,.contact-box{grid-template-columns:1fr;}
     .cat-grid,.serv-grid{grid-template-columns:1fr 1fr;}
-    .port-grid{grid-template-columns:1fr 1fr;}
+    .port-grid{grid-template-columns:repeat(2,1fr);}
     .statsbar .wrap{grid-template-columns:1fr 1fr;}
     .hero h1{font-size:2.4rem;}
   }
@@ -318,199 +328,412 @@
     .contact-box{padding:32px;}
   }
 </style>
-</head>
-<body>
+  </head>
+  <body>
 
-<header>
-  <nav>
-    <a href="#inicio" class="logo"><span class="bow">🎀</span> Joan <span>Lazo</span></a>
-    <div class="nav-links" id="navLinks">
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#contenido">Contenido</a>
-      <a href="#portafolio">Portafolio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto" class="nav-cta">Contáctame</a>
-    </div>
-    <button class="menu-btn" id="menuBtn">☰</button>
-  </nav>
-</header>
+    <header>
+      <nav>
+        <a href="#inicio" class="logo"><span class="bow">🎀</span> Joan
+          <span>Lazo</span></a>
+        <div class="nav-links" id="navLinks">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#contenido">Contenido</a>
+          <a href="#portafolio">Portafolio</a>
+          <a href="#contacto" class="nav-cta">Contáctame</a>
+        </div>
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </nav>
+    </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="inicio">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="tag-pill">🎬 Creadora de contenido UGC</span>
-      <h1>Contenido que se siente <em>real</em>, que conecta y que vende.</h1>
-      <p class="lead">Hola, soy Joan. Creo contenido auténtico para marcas de belleza, moda/lifestyle y tecnología: reviews, unboxings, tutoriales y testimoniales pensados para TikTok, Reels y ads.</p>
-      <div class="hero-actions">
-        <a href="#portafolio" class="btn btn-primary">Ver mi portafolio ↓</a>
-        <a href="#contacto" class="btn btn-outline">Trabajemos juntas</a>
-      </div>
-<div class="hero-stats">
-        <div><b id="statVideos">+30K</b><span>Views</span></div>
-        <div><b id="statSeguidores">+980</b><span>Seguidores TikTok</span></div>
-        <div><b>3</b><span>Nichos: belleza, lifestyle, tech</span></div>
-      </div>
-    </div>
-    <div class="avatar-wrap">
-      <div class="avatar-bow">🎀</div>
-      <div class="avatar-card">
-        <div class="avatar-initials"><img src="img/pelo-corto.png" alt="Joan con cabello corto"></div>
-        <div class="float-badge">📍 Peru </div>
-      </div>
-    </div>
-  </div>
-  <div class="check-divider pattern-check"></div>
-</section>
-
-<!-- ================= SOBRE MI ================= -->
-<section class="about" id="sobre-mi">
-  <div class="wrap about-grid">
-    <div class="about-photo"><img src="img/joan-oficina.jpg" alt="Joan en la oficina"></div>
-    <div class="about-text">
-      <span class="tag-pill">🌸 Sobre mí</span>
-      <h3>Cuento historias que las marcas necesitan para vender</h3>
-      <p>¡Hola, soy Joan! Tengo 31 años y creo contenido porque me encanta conectar con las personas de una forma genuina. Ese amor por conectar es justo lo que aplico al UGC: contenido nativo, divertido y con un toque dulce que hace que tu producto se sienta parte de la vida real de tu audiencia. Actualmente busco oportunidades en el nicho tech, donde puedo unir mi lado curioso con mi estilo cercano para crear contenido que realmente conecte.</p>
-      <p>Creo contenido en formato de reels, videos cortos e historias — piezas pensadas para captar la atención rápido y sentirse naturales dentro del feed, no como publicidad forzada. Me adapto al tono de cada marca sin perder mi esencia auténtica y cercana, y entrego contenido listo para usar en redes propias o pautado.</p>
-      <ul class="about-list">
-        <li>Contenido nativo y auténtico, sin que se sienta a comercial</li>
-        <li>Entrega rápida y comunicación clara durante todo el proceso</li>
-        <li>Experiencia en belleza, moda/lifestyle y tecnología</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CATEGORIAS ================= -->
-<section class="categorias" id="contenido">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">🌷 Mis nichos</span>
-      <h2>El contenido que mejor sé crear</h2>
-      <p>Me especializo en tres categorías donde entiendo a la audiencia y sé cómo hacer que un producto brille en cámara.</p>
-    </div>
-    <div class="cat-grid">
-      <div class="cat-card">
-        <div class="cat-icon">💄</div>
-        <h3>Belleza &amp; Skincare</h3>
-        <p>Reviews, rutinas, get ready with me y primeras impresiones de productos de belleza y cuidado de la piel.</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon">👗</div>
-        <h3>Moda &amp; Lifestyle</h3>
-        <p>Outfits, hauls, día en mi vida y contenido lifestyle que conecta con la vida real de la audiencia.</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon">📱</div>
-        <h3>Tecnología</h3>
-        <p>Unboxings, reviews y tutoriales de apps, gadgets y productos tech explicados de forma simple.</p>
-      </div>
-    </div>
-  </div>
-  <div class="check-divider pattern-check"></div>
-</section>
-
-<!-- ================= PORTAFOLIO ================= -->
-<section class="portafolio" id="portafolio">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">🎀 Portafolio</span>
-      <h2>Contenido destacado</h2>
-      <p>Una selección de mis videos reproducibles directamente desde la página (TikTok e Instagram Reels).</p>
-    </div>
-    <div class="port-grid">
-      <div class="port-card" data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7670721366827502866"><div class="thumb-fallback"><b>💄</b>Belleza</div><div class="overlay"><span class="tag">💄 Belleza</span><div class="titulo">Review de producto</div></div><iframe data-src="https://www.tiktok.com/embed/v2/7670721366827502866" title="Belleza" loading="lazy" allow="autoplay; fullscreen; encrypted-media" allowfullscreen></iframe><button class="port-play" type="button" aria-label="Reproducir video de belleza">▶</button></div>
-      <div class="port-card" data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7653577299995938055"><div class="thumb-fallback"><b>👗</b>Moda</div><div class="overlay"><span class="tag">👗 Moda</span><div class="titulo">Outfit del día</div></div><iframe data-src="https://www.tiktok.com/embed/v2/7653577299995938055" title="Moda" loading="lazy" allow="autoplay; fullscreen; encrypted-media" allowfullscreen></iframe><button class="port-play" type="button" aria-label="Reproducir video de moda">▶</button></div>
-      <div class="port-card" data-thumb="https://www.instagram.com/reel/DcmYwi8xrIr/embed"><div class="thumb-fallback"><b>📱</b>Tech</div><div class="overlay"><span class="tag">📱 Tecnología</span><div class="titulo">Unboxing tech</div></div><iframe data-src="https://www.instagram.com/reel/DcmYwi8xrIr/embed" title="Tech" loading="lazy" allow="fullscreen; encrypted-media" allowfullscreen></iframe><button class="port-play" type="button" aria-label="Reproducir video de tecnología">▶</button></div>
-      <div class="port-card" data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7679863612768488712"><div class="thumb-fallback"><b>🎀</b>LifeStyle</div><div class="overlay"><span class="tag">🎀 Lifestyle</span><div class="titulo">Día en mi vida</div></div><iframe data-src="https://www.tiktok.com/embed/v2/7679863612768488712" title="LifeStyle" loading="lazy" allow="autoplay; fullscreen; encrypted-media" allowfullscreen></iframe><button class="port-play" type="button" aria-label="Reproducir video de lifestyle">▶</button></div>
-      <div class="port-card" data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7666094728248626450"><div class="thumb-fallback"><b>🍕</b>Food</div><div class="overlay"><span class="tag">🍕 Food</span><div class="titulo">Receta rápida</div></div><iframe data-src="https://www.tiktok.com/embed/v2/7666094728248626450" title="Food" loading="lazy" allow="autoplay; fullscreen; encrypted-media" allowfullscreen></iframe><button class="port-play" type="button" aria-label="Reproducir video de food">▶</button></div>
-      <div class="port-card" data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40joan.viaja%2Fvideo%2F7673653167699053832"><div class="thumb-fallback"><b>📱</b>Tech</div><div class="overlay"><span class="tag">📱 Tecnología</span><div class="titulo">Primera impresión</div></div><iframe data-src="https://www.tiktok.com/embed/v2/7673653167699053832" title="Tech" loading="lazy" allow="autoplay; fullscreen; encrypted-media" allowfullscreen></iframe><button class="port-play" type="button" aria-label="Reproducir video de tecnología">▶</button></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= STATS ================= -->
-<section class="statsbar">
-  <div class="wrap">
-    <div><b>+2</b><span>Marcas colaboradas</span></div>
-    <div><b>48h</b><span>Tiempo de entrega promedio</span></div>
-    <div><b>+30k</b><span>Vistas logradas</span></div>
-    <div><b>2</b><span>Rondas de revisión incluidas</span></div>
-  </div>
-</section>
-
-<!-- ================= SERVICIOS ================= -->
-<section class="servicios" id="servicios">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">🍒 Servicios</span>
-      <h2>¿Cómo podemos trabajar juntas?</h2>
-      <p>Paquetes flexibles según el objetivo de tu marca. Ajusta nombres y precios a tu realidad.</p>
-    </div>
-    <div class="serv-grid">
-      <div class="serv-card">
-        <h3>🎥 Video de producto</h3>
-        <p>Un video corto y auténtico mostrando el producto en uso, ideal para feed o TikTok orgánico.</p>
-        <div class="serv-price">Desde $50</div>
-      </div>
-      <div class="serv-card">
-        <h3>📦 Unboxing</h3>
-        <p>Primera impresión real al abrir y probar el producto, con reacciones genuinas.</p>
-        <div class="serv-price">Desde $50</div>
-      </div>
-      <div class="serv-card">
-        <h3>⭐ Review / Testimonio</h3>
-        <p>Opinión honesta tras usar el producto, resaltando beneficios y experiencia personal.</p>
-        <div class="serv-price">Desde $50</div>
-      </div>
-      <div class="serv-card">
-        <h3>📚 Tutorial / How-to</h3>
-        <p>Contenido educativo mostrando cómo usar un producto o app paso a paso.</p>
-        <div class="serv-price">Desde $100</div>
-      </div>
-      <div class="serv-card">
-        <h3>📣 Contenido para Ads</h3>
-        <p>Videos UGC optimizados como creativos de pauta (Meta Ads, TikTok Ads), con hooks fuertes.</p>
-        <div class="serv-price">Desde $200</div>
-      </div>
-      <div class="serv-card">
-        <h3>📦 Paquete mensual</h3>
-        <p>Varios videos al mes para marcas que necesitan contenido recurrente.</p>
-        <div class="serv-price">Desde $500</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACTO ================= -->
-<section class="contacto" id="contacto">
-  <div class="wrap">
-    <div class="contact-box">
-      <div>
-        <span class="tag-pill">🎀 Contacto</span>
-        <h2>¿Trabajamos juntas?</h2>
-        <p>Cuéntame sobre tu marca y tu producto. Respondo en menos de 24 horas.</p>
-        <div class="socialgrid">
-          <a href="https://www.instagram.com/soyjoanlazo/" target="_blank" rel="noopener noreferrer"><span class="social-pill">📷 Instagram: @soyjoanlazo </span></a>
-          <a href="https://www.tiktok.com/@soyjoanlazo" target="_blank" rel="noopener noreferrer"><span class="social-pill">🎵 TikTok: @soyjoanlazo </span></a>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="tag-pill">🎬 Creadora de contenido UGC</span>
+          <h1>Contenido que se siente <em>real</em>, que conecta y que
+            vende.</h1>
+          <p class="lead">Hola, soy Joan. Creo contenido auténtico para marcas
+            de belleza, moda/lifestyle y tecnología: reviews, unboxings,
+            tutoriales y testimoniales pensados para TikTok, Reels y ads.</p>
+          <div class="hero-actions">
+            <a href="#portafolio" class="btn btn-primary">Ver mi portafolio
+              ↓</a>
+            <a href="#contacto" class="btn btn-outline">Trabajemos juntos</a>
+          </div>
+          <div class="hero-stats">
+            <div><b id="statVideos">+30K</b><span>Views</span></div>
+            <div><b id="statSeguidores">+1000</b><span>Seguidores
+                TikTok</span></div>
+            <div><b>3</b><span>Nichos: belleza, lifestyle, tech</span></div>
+          </div>
+        </div>
+        <div class="avatar-wrap">
+          <div class="avatar-bow">🎀</div>
+          <div class="avatar-card">
+            <div class="avatar-initials"><img src="img/pelo-corto.png"
+                alt="Joan con cabello corto"></div>
+            <div class="float-badge">📍 Peru </div>
+          </div>
         </div>
       </div>
-      <div class="contact-links">
-        <a href="mailto:joanlazo.ugc@gmail.com">✉️ joanlazo.ugc@gmail.com </a>
-        <a href="https://w.app/joanlazo" target="_blank">💬 WhatsApp : +51 997 971 032 </a>
-        <a href="https://drive.google.com/file/d/1yePhwfLi2cEw_lbv1qmn57BfIsUaSIu8/view?usp=drive_link" target="_blank" >🔗 Media Kit descargable</a>
+      <div class="check-divider pattern-check"></div>
+    </section>
+
+    <!-- ================= SOBRE MI ================= -->
+    <section class="about" id="sobre-mi">
+      <div class="wrap about-grid">
+        <div class="about-photo"><img src="img/joan-oficina.jpg"
+            alt="Joan en la oficina"></div>
+        <div class="about-text">
+          <span class="tag-pill">🌸 Sobre mí</span>
+          <h3>Cuento historias que las marcas necesitan para vender</h3>
+          <p>¡Hola, soy Joan! Tengo 31 años y creo contenido porque me encanta
+            conectar con las personas de una forma genuina. Ese amor por
+            conectar es justo lo que aplico al UGC: contenido nativo, divertido
+            y con un toque dulce que hace que tu producto se sienta parte de la
+            vida real de tu audiencia. Actualmente busco oportunidades en el
+            nicho tech, donde puedo unir mi lado curioso con mi estilo cercano
+            para crear contenido que realmente conecte.</p>
+          <p>Creo contenido en formato de reels, videos cortos e historias —
+            piezas pensadas para captar la atención rápido y sentirse naturales
+            dentro del feed, no como publicidad forzada. Me adapto al tono de
+            cada marca sin perder mi esencia auténtica y cercana, y entrego
+            contenido listo para usar en redes propias o pautado.</p>
+          <ul class="about-list">
+            <li>Contenido nativo y auténtico, sin que se sienta a comercial</li>
+            <li>Entrega rápida y comunicación clara durante todo el proceso</li>
+            <li>Experiencia en belleza, moda/lifestyle y tecnología</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<footer>
-  <div class="footer-icons">🎀 🌷 🍒 🎀</div>
-  <b>Joan Lazo</b> · Creadora de Contenido UGC · Belleza · Moda/Lifestyle · Tecnología<br>
-  © 2026 — Hecho con 💗 para marcas que buscan contenido real.
-</footer>
+    <!-- ================= CATEGORIAS ================= -->
+    <section class="categorias" id="contenido">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">🌷 Mis nichos</span>
+          <h2>El contenido que mejor sé crear</h2>
+          <p>Me especializo en tres categorías donde entiendo a la audiencia y
+            sé cómo hacer que un producto brille en cámara.</p>
+        </div>
+        <div class="cat-grid">
+          <div class="cat-card">
+            <div class="cat-icon">💄</div>
+            <h3>Belleza &amp; Skincare</h3>
+            <p>Reviews, rutinas, get ready with me y primeras impresiones de
+              productos de belleza y cuidado de la piel.</p>
+          </div>
+          <div class="cat-card">
+            <div class="cat-icon">👗</div>
+            <h3>Moda &amp; Lifestyle</h3>
+            <p>Outfits, hauls, día en mi vida y contenido lifestyle que conecta
+              con la vida real de la audiencia.</p>
+          </div>
+          <div class="cat-card">
+            <div class="cat-icon">📱</div>
+            <h3>Tecnología</h3>
+            <p>Unboxings, reviews y tutoriales de apps, gadgets y productos tech
+              explicados de forma simple.</p>
+          </div>
+        </div>
+      </div>
+      <div class="check-divider pattern-check"></div>
+    </section>
 
-<script>
+    <!-- ================= PORTAFOLIO ================= -->
+    <section class="portafolio" id="portafolio">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">🎀 Portafolio</span>
+          <h2>Contenido destacado</h2>
+          <p>Una selección de mis videos reproducibles directamente desde la página (TikTok e Instagram Reels).</p>
+        </div>
+
+<!-- Sección: Belleza -->
+        <div class="niche-section belleza">
+          <h3>Belleza & Skincare</h3>
+          <div class="port-grid">
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7670721366827502866"><div
+                class="thumb-fallback"><b>💄</b>Belleza</div><div
+                class="overlay"><span class="tag">💄 Belleza</span><div
+                  class="titulo">Review de producto</div></div><iframe
+                  data-src="https://www.tiktok.com/embed/v2/7670721366827502866"
+                  title="Belleza" loading="lazy"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowfullscreen></iframe><button class="port-play" type="button"
+                  aria-label="Reproducir video de belleza">▶</button></div>
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7692263806877109522"><div
+                class="thumb-fallback"><b>💄</b>Belleza</div><div
+                class="overlay"><span class="tag">💄 Belleza</span><div
+                  class="titulo">Rutina de skincare</div></div><iframe
+                  data-src="https://www.tiktok.com/embed/v2/7692263806877109522"
+                  title="Belleza" loading="lazy"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowfullscreen></iframe><button class="port-play" type="button"
+                  aria-label="Reproducir video de belleza">▶</button></div>
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7689277536445959442"><div
+                class="thumb-fallback"><b>💄</b>Belleza</div><div
+                class="overlay"><span class="tag">💄 Belleza</span><div
+                  class="titulo">Get ready with me</div></div><iframe
+                  data-src="https://www.tiktok.com/embed/v2/7689277536445959442"
+                  title="Belleza" loading="lazy"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowfullscreen></iframe><button class="port-play" type="button"
+                  aria-label="Reproducir video de belleza">▶</button></div>
+          </div>
+        </div>
+
+<!-- Sección: Moda -->
+        <div class="niche-section moda">
+          <h3>Moda & Lifestyle</h3>
+          <div class="port-grid">
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7653577299995938055"><div
+                class="thumb-fallback"><b>👗</b>Moda</div><div
+                class="overlay"><span class="tag">👗 Moda</span><div
+                  class="titulo">Outfit del día</div></div><iframe
+                  data-src="https://www.tiktok.com/embed/v2/7653577299995938055"
+                  title="Moda" loading="lazy"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowfullscreen></iframe><button class="port-play" type="button"
+                  aria-label="Reproducir video de moda">▶</button></div>
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7684723866010258695"><div
+                class="thumb-fallback"><b>👗</b>Moda</div><div
+                class="overlay"><span class="tag">👗 Moda</span><div
+                  class="titulo">Outfit de temporada</div></div><iframe
+                  data-src="https://www.tiktok.com/embed/v2/7684723866010258695"
+                  title="Moda" loading="lazy"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowfullscreen></iframe><button class="port-play" type="button"
+                  aria-label="Reproducir video de moda">▶</button></div>
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7681372846378978568"><div
+                class="thumb-fallback"><b>👗</b>Moda</div><div
+                class="overlay"><span class="tag">👗 Moda</span><div
+                  class="titulo">Look casual</div></div><iframe
+                  data-src="https://www.tiktok.com/embed/v2/7681372846378978568"
+                  title="Moda" loading="lazy"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowfullscreen></iframe><button class="port-play" type="button"
+                  aria-label="Reproducir video de moda">▶</button></div>
+          </div>
+        </div>
+
+<!-- Sección: Lifestyle -->
+        <div class="niche-section lifestyle">
+          <h3>Lifestyle</h3>
+          <div class="port-grid">
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7679863612768488712"><div
+                class="thumb-fallback"><b>🎀</b>LifeStyle</div><div
+                class="overlay"><span class="tag">🎀 Lifestyle</span><div
+                  class="titulo">Día en mi vida</div></div><iframe
+                  data-src="https://www.tiktok.com/embed/v2/7679863612768488712"
+                  title="LifeStyle" loading="lazy"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowfullscreen></iframe><button class="port-play" type="button"
+                  aria-label="Reproducir video de lifestyle">▶</button></div>
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7691931468490083602"><div
+                class="thumb-fallback"><b>🎀</b>LifeStyle</div><div
+                class="overlay"><span class="tag">🎀 Lifestyle</span><div
+                  class="titulo">Viaje a la playa</div></div><iframe
+                  data-src="https://www.tiktok.com/embed/v2/7691931468490083602"
+                  title="LifeStyle" loading="lazy"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowfullscreen></iframe><button class="port-play" type="button"
+                  aria-label="Reproducir video de lifestyle">▶</button></div>
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7690066739530370322"><div
+                class="thumb-fallback"><b>🎀</b>LifeStyle</div><div
+                class="overlay"><span class="tag">🎀 Lifestyle</span><div
+                  class="titulo">Compras en el centro</div></div><iframe
+                  data-src="https://www.tiktok.com/embed/v2/7690066739530370322"
+                  title="LifeStyle" loading="lazy"
+                  allow="autoplay; fullscreen; encrypted-media"
+                  allowfullscreen></iframe><button class="port-play" type="button"
+                  aria-label="Reproducir video de lifestyle">▶</button></div>
+          </div>
+        </div>
+
+        <!-- Sección: Tecnología -->
+        <div class="niche-section tecnologia">
+          <h3>Tecnología</h3>
+          <div class="port-grid">
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40joan.viaja%2Fvideo%2F7673653167699053832"><div
+                class="thumb-fallback"><b>📱</b>Tech</div><div
+                class="overlay"><span class="tag">📱 Tecnología</span><div
+                  class="titulo">Primera impresión</div></div><iframe
+                data-src="https://www.tiktok.com/embed/v2/7673653167699053832"
+                title="Tech" loading="lazy"
+                allow="autoplay; fullscreen; encrypted-media"
+                allowfullscreen></iframe><button class="port-play" type="button"
+                aria-label="Reproducir video de tecnología">▶</button></div>
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7687324446121561352"><div
+                class="thumb-fallback"><b>📱</b>Tech</div><div
+                class="overlay"><span class="tag">📱 Tecnología</span><div
+                  class="titulo">Review de gadget</div></div><iframe
+                data-src="https://www.tiktok.com/embed/v2/7687324446121561352"
+                title="Tech" loading="lazy"
+                allow="autoplay; fullscreen; encrypted-media"
+                allowfullscreen></iframe><button class="port-play" type="button"
+                aria-label="Reproducir video de tecnología">▶</button></div>
+            <div class="port-card"
+              data-thumb="https://www.instagram.com/reel/DcmYwi8xrIr/embed"><div
+                class="thumb-fallback"><b>📱</b>Tech</div><div
+                class="overlay"><span class="tag">📱 Tecnología</span><div
+                  class="titulo">Unboxing tech</div></div><iframe
+                data-src="https://www.instagram.com/reel/DcmYwi8xrIr/embed"
+                title="Tech" loading="lazy" allow="fullscreen; encrypted-media"
+                allowfullscreen></iframe><button class="port-play" type="button"
+                aria-label="Reproducir video de tecnología">▶</button></div>
+          </div>
+        </div>
+
+        <!-- Sección: Food -->
+        <div class="niche-section food">
+          <h3>Food</h3>
+          <div class="port-grid">
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7666094728248626450"><div
+                class="thumb-fallback"><b>🍕</b>Food</div><div
+                class="overlay"><span class="tag">🍕 Food</span><div
+                  class="titulo">Receta rápida</div></div><iframe
+                data-src="https://www.tiktok.com/embed/v2/7666094728248626450"
+                title="Food" loading="lazy"
+                allow="autoplay; fullscreen; encrypted-media"
+                allowfullscreen></iframe><button class="port-play" type="button"
+                aria-label="Reproducir video de food">▶</button></div>
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7693314744534453512"><div
+                class="thumb-fallback"><b>🍕</b>Food</div><div
+                class="overlay"><span class="tag">🍕 Food</span><div
+                  class="titulo">Receta rápida 2</div></div><iframe
+                data-src="https://www.tiktok.com/embed/v2/7693314744534453512"
+                title="Food" loading="lazy"
+                allow="autoplay; fullscreen; encrypted-media"
+                allowfullscreen></iframe><button class="port-play" type="button"
+                aria-label="Reproducir video de food">▶</button></div>
+            <div class="port-card"
+              data-thumb="https://www.tiktok.com/oembed?url=https%3A%2F%2Fwww.tiktok.com%2F%40soyjoanlazo%2Fvideo%2F7688507938297711890"><div
+                class="thumb-fallback"><b>🍕</b>Food</div><div
+                class="overlay"><span class="tag">🍕 Food</span><div
+                  class="titulo">Receta rápida 3</div></div><iframe
+                data-src="https://www.tiktok.com/embed/v2/7688507938297711890"
+                title="Food" loading="lazy"
+                allow="autoplay; fullscreen; encrypted-media"
+                allowfullscreen></iframe><button class="port-play" type="button"
+                aria-label="Reproducir video de food">▶</button></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section class="statsbar">
+      <div class="wrap">
+        <div><b>+2</b><span>Marcas colaboradas</span></div>
+        <div><b>48h</b><span>Tiempo de entrega promedio</span></div>
+        <div><b>+30k</b><span>Vistas logradas</span></div>
+        <div><b>2</b><span>Rondas de revisión incluidas</span></div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICIOS ================= -->
+    <section class="servicios" id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">🍒 Servicios</span>
+          <h2>¿Cómo podemos trabajar juntos?</h2>
+          <p>Paquetes flexibles según el objetivo de tu marca. Ajusta nombres y
+            precios a tu realidad.</p>
+        </div>
+        <div class="serv-grid">
+          <div class="serv-card">
+            <h3>🎥 Video de producto</h3>
+            <p>Un video corto y auténtico mostrando el producto en uso, ideal
+              para feed o TikTok orgánico.</p>
+            <div class="serv-price">Desde $50</div>
+          </div>
+          <div class="serv-card">
+            <h3>📦 Unboxing</h3>
+            <p>Primera impresión real al abrir y probar el producto, con
+              reacciones genuinas.</p>
+            <div class="serv-price">Desde $50</div>
+          </div>
+          <div class="serv-card">
+            <h3>⭐ Review / Testimonio</h3>
+            <p>Opinión honesta tras usar el producto, resaltando beneficios y
+              experiencia personal.</p>
+            <div class="serv-price">Desde $50</div>
+          </div>
+          <div class="serv-card">
+            <h3>📚 Tutorial / How-to</h3>
+            <p>Contenido educativo mostrando cómo usar un producto o app paso a
+              paso.</p>
+            <div class="serv-price">Desde $100</div>
+          </div>
+          <div class="serv-card">
+            <h3>📣 Contenido para Ads</h3>
+            <p>Videos UGC optimizados como creativos de pauta (Meta Ads, TikTok
+              Ads), con hooks fuertes.</p>
+            <div class="serv-price">Desde $200</div>
+          </div>
+          <div class="serv-card">
+            <h3>📦 Paquete mensual</h3>
+            <p>Varios videos al mes para marcas que necesitan contenido
+              recurrente.</p>
+            <div class="serv-price">Desde $500</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="contacto" id="contacto">
+      <div class="wrap">
+        <div class="contact-box">
+          <div>
+            <span class="tag-pill">🎀 Contacto</span>
+            <h2>¿Trabajamos juntos?</h2>
+            <p>Cuéntame sobre tu marca y tu producto. Respondo en menos de 24
+              horas.</p>
+            <div class="socialgrid">
+              <a href="https://www.instagram.com/joanlazom/" target="_blank"
+                rel="noopener noreferrer"><span class="social-pill">📷
+                  Instagram: @joanlazom </span></a>
+              <a href="https://www.tiktok.com/@soyjoanlazo" target="_blank"
+                rel="noopener noreferrer"><span class="social-pill">🎵 TikTok:
+                  @soyjoanlazo </span></a>
+            </div>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:joanlazo.ugc@gmail.com">✉️ joanlazo.ugc@gmail.com
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1yePhwfLi2cEw_lbv1qmn57BfIsUaSIu8/view?usp=drive_link"
+              target="_blank">🔗 Media Kit descargable</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-icons">🎀 🌷 🍒 🎀</div>
+      <b>Joan Lazo</b> · Creadora de Contenido UGC · Belleza · Moda/Lifestyle ·
+      Tecnología<br>
+      © 2026 — Hecho con 💗 para marcas que buscan contenido real.
+    </footer>
+
+    <script>
   const menuBtn = document.getElementById('menuBtn');
   const navLinks = document.getElementById('navLinks');
   menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
@@ -616,5 +839,5 @@
   });
 </script>
 
-</body>
+  </body>
 </html>
